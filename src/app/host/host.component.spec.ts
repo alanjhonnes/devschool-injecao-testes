@@ -8,9 +8,9 @@ describe('HostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HostComponent ]
+      declarations: [HostComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -20,6 +20,6 @@ describe('HostComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toEqual;
   });
 });

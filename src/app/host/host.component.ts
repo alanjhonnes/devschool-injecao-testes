@@ -1,4 +1,4 @@
-import { Component, Host, HostBinding, OnInit, Optional } from '@angular/core';
+import { Component, Host, HostBinding, OnInit, Optional, SkipSelf } from '@angular/core';
 import { IconService } from '../icon.service';
 
 @Component({
@@ -6,17 +6,17 @@ import { IconService } from '../icon.service';
   templateUrl: './host.component.html',
   styleUrls: ['./host.component.css'],
   providers: [
-    {
-      provide: IconService,
-      useValue: <IconService>{
-        getIcon: () => '✈'
-      }
-    }
+    // {
+    //   provide: IconService,
+    //   useValue: <IconService>{
+    //     getIcon: () => '✈'
+    //   }
+    // }
   ]
 })
 export class HostComponent implements OnInit {
 
-  constructor(@Host() public iconService: IconService) { }
+  constructor(@Host() @Optional() public iconService: IconService) { }
 
   @HostBinding('class.componente')
   classe = true

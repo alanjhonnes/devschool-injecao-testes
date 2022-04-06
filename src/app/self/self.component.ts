@@ -4,11 +4,20 @@ import { IconService } from '../icon.service';
 @Component({
   selector: 'app-self',
   templateUrl: './self.component.html',
-  styleUrls: ['./self.component.css']
+  styleUrls: ['./self.component.css'],
+  providers: [
+    {
+      provide: IconService,
+      useValue: {
+        getIcon: () => '🚡 '
+      }
+    }
+
+  ]
 })
 export class SelfComponent implements OnInit {
 
-  constructor(@Self() @Optional() public iconService?: IconService) { }
+  constructor(@Self() public iconService: IconService) { }
 
   @HostBinding('class.componente')
   classe = true

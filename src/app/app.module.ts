@@ -10,6 +10,7 @@ import { SelfComponent } from './self/self.component';
 import { SelfOptionalComponent } from './self-optional/self-optional.component';
 import { SkipSelfComponent } from './skip-self/skip-self.component';
 import { Config, ConfigToken } from './config-token.token';
+import { SkipSelfChildComponent } from './skip-self-child/skip-self-child.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { Config, ConfigToken } from './config-token.token';
     SelfComponent,
     SelfOptionalComponent,
     SkipSelfComponent,
+    SkipSelfChildComponent,
   ],
   imports: [
     BrowserModule
