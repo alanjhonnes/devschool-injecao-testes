@@ -33,7 +33,7 @@ export class OptionalComponent implements OnInit {
   }
 
   getIcon() {
-    return this.optionalService?.getIcon() || '🧀 '
+    return this.optionalService?.getIcon() || '🧀'
   }
 
 }

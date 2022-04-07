@@ -13,4 +13,8 @@ describe('IconService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('return an icon', () => {
+    expect(service.getIcon()).toBe('🌸');
+  });
 });

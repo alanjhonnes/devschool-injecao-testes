@@ -11,4 +11,11 @@ describe('example to-do app', () => {
 
   })
 
+  it('deve exibir titulo', () => {
+    cy.get('h1').should('contain.text', 'Injeção de Dependência - AppComponent')
+
+    cy.get('#input-text').type("alan jhonnes")
+    cy.get('#button').click()
+  })
+
 })

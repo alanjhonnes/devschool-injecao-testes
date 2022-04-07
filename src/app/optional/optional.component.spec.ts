@@ -8,9 +8,9 @@ describe('OptionalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionalComponent ]
+      declarations: [OptionalComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,9 @@ describe('OptionalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show icon from service', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.icon')?.textContent).toContain('👾');
+  })
 });

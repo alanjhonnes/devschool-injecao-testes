@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { IconService } from '../icon.service';
 
 import { HostComponent } from './host.component';
 
@@ -8,7 +9,15 @@ describe('HostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HostComponent]
+      declarations: [HostComponent],
+      providers: [
+        {
+          provide: IconService,
+          useValue: {
+            getIcon: () => 'abc'
+          }
+        }
+      ]
     })
       .compileComponents();
   });
